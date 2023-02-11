@@ -1,8 +1,9 @@
 import Header from "./components/header/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
-import Home from "./components/home/Home";
+// import Home from "./components/home/Home";
 import Chat from "./components/chat/Chat";
+import TinderCards from "./TinderCards";
 function App() {
   return (
     <div className="App">
@@ -10,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
+            <Route index element={<TinderCards />} />
             <Route path="chat" element={<Chat />} />
           </Route>
         </Routes>
