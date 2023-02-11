@@ -1,4 +1,4 @@
-// import Header from "./components/header/Header";
+import Header from "./components/header/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Home from "./components/home/Home";
@@ -6,6 +6,7 @@ import Chat from "./components/chat/Chat";
 function App() {
   return (
     <div className="App">
+      <Header />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
