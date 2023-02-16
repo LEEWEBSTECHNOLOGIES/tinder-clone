@@ -3,6 +3,7 @@ import "./header.css";
 import PersonIcon from "@mui/icons-material/Person";
 import ForumIcon from "@mui/icons-material/Forum";
 import IconButton from "@mui/material/IconButton";
+// import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -17,9 +18,11 @@ const Header = () => {
         src="https://1000logos.net/wp-content/uploads/2018/07/Tinder-logo-700x394.png"
         alt="tinder logo"
       />
-      <IconButton>
-        <ForumIcon className="header__icon" fontSize="large" />
-      </IconButton>
+      {/* <Link to="/chat"> */}
+        <IconButton>
+          <ForumIcon className="header__icon" fontSize="large" />
+        </IconButton>
+      {/* </Link> */}
     </div>
   );
 };
