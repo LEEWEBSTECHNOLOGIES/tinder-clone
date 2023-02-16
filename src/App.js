@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 // import Home from "./components/home/Home";
 import Chat from "./components/chat/Chat";
-import TinderCards from "./tindercards/TinderCards";
+import TinderCards from "./components/tindercards/TinderCards";
+import SwipeButtons from "./components/swipebuttons/SwipeButtons";
 function App() {
   return (
     <div className="App">
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<TinderCards />} />
+            <Route path="swipebuttons" element={<SwipeButtons />} />
             <Route path="chat" element={<Chat />} />
           </Route>
         </Routes>

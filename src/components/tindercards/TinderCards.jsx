@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import TinderCard from "react-tinder-card";
-import database from "../firebase";
+import database from "../../firebase";
+// import database from "../firebase";
 import "./tindercards.css";
 
 const TinderCards = () => {
@@ -11,11 +12,16 @@ const TinderCards = () => {
   useEffect(() => {
     // this is where the code runs...
     // this will run once when the component loads and never again
-    database
+    const unsubscribe = database
       .collection("people")
       .onSnapshot((snapshot) =>
         setPeople(snapshot.docs.map((doc) => doc.data()))
       );
+
+    return () => {
+      // this is the cleanup...
+      unsubscribe();
+    };
   }, []);
   return (
     <div>
