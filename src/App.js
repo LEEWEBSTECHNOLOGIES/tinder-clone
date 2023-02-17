@@ -7,18 +7,16 @@ import TinderCards from "./components/tindercards/TinderCards";
 import SwipeButtons from "./components/swipebuttons/SwipeButtons";
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
       <Header />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<TinderCards />} />
-            <Route path="chat" element={<Chat />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<TinderCards />} />
+          <Route path="chat" element={<Chat />} />
+        </Route>
+      </Routes>
       <SwipeButtons />
-    </div>
+    </BrowserRouter>
   );
 }
 
