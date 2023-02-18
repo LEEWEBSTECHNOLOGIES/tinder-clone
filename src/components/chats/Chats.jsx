@@ -5,20 +5,20 @@ const Chats = () => {
   return (
     <div className="chats">
       <Chat
-        name="Maryam"
-        message="Hello how are you 😇 " 
+        name="Bilaal"
+        message="Hello how are you 😇 "
         timestamp="40 seconds ago"
         profilePic="https://bilalphilips.com/wp-content/uploads/2016/10/Dr-bilal-Profile-pic.jpg"
       />
       <Chat
-        name="Faatimah"
-        message="What's up? 🤟" 
+        name="Maryam"
+        message="What's up? 🤟"
         timestamp="40 seconds ago"
         profilePic="https://ichef.bbci.co.uk/news/976/cpsprodpb/C0DA/production/_84307394_d748dc3d-1c4f-4ba9-ab20-0a1f59223ddd.jpg"
       />
       <Chat
         name="Aaishah"
-        message="Hello sister 🚀" 
+        message="Hello sister 🚀"
         timestamp="40 seconds ago"
         profilePic="https://muslimvoice.com.ng/wp-content/uploads/2022/01/Screenshot_20220119-120015.png"
       />
@@ -30,7 +30,7 @@ const Chats = () => {
       />
       <Chat
         name="Summayyah"
-        message="Ola 😇 "
+        message="Ola 😇"
         timestamp="40 seconds ago"
         profilePic="https://www.habeebat.com/wp-content/uploads/2019/06/Top-5-Fashion-Dos-and-Donts-for-the-Nigerian-Muslim-Man-b.png"
       />
