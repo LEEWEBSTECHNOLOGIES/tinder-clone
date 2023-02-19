@@ -17,11 +17,12 @@ function App() {
               <>
                 <Header />
                 <TinderCards />
+                <SwipeButtons />
               </>
             }
           />
-           <Route
-            path="chat/:person"
+          <Route
+            path="/chat/:person"
             element={
               <>
                 <Header backButton="/chat" />
@@ -30,7 +31,7 @@ function App() {
             }
           />
           <Route
-            path="chat"
+            path="/chat"
             element={
               <>
                 <Header backButton="/" />
@@ -40,7 +41,6 @@ function App() {
           />
         </Route>
       </Routes>
-      <SwipeButtons />
     </BrowserRouter>
   );
 }

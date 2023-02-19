@@ -9,11 +9,14 @@ const Header = ({ backButton }) => {
   const navigate = useNavigate();
   return (
     // BEM
+
     <div className="header">
       {backButton ? (
-        <IconButton onClick={() => navigate.replace(backButton)}>
-          <ArrowBackIos fontSize="large" className="header__icon" />
-        </IconButton>
+        <Link to="/chat">
+          <IconButton onClick={() => navigate.replace(backButton)}>
+            <ArrowBackIos fontSize="large" className="header__icon" />
+          </IconButton>
+        </Link>
       ) : (
         <IconButton>
           <PersonIcon className="header__icon" fontSize="large" />
