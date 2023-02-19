@@ -1,9 +1,9 @@
-import { Rocket } from "@mui/icons-material";
 import { Avatar } from "@mui/material";
 import { useState } from "react";
 import "./chatscreen.css";
 
 const Chatscreen = () => {
+  const [input, setInput] = useState("");
   const [messages, setMessages] = useState([
     {
       name: "Maryam",
@@ -15,12 +15,19 @@ const Chatscreen = () => {
       name: "Maryam",
       image:
         "https://muslimvoice.com.ng/wp-content/uploads/2022/01/Screenshot_20220119-120015.png",
-      message: "how far 🚀?",
+      message: "how far 💌 ?",
     },
     {
       message: "Hi, how are you Maryam💟 ?",
     },
   ]);
+
+  const handleSend = (e) => {
+    e.preventDefault();
+
+    setMessages([...messages, { message: input }]);
+    setInput("");
+  };
   return (
     <div className="chatScreen">
       <p className="chatScreen__timestamp">
@@ -42,6 +49,22 @@ const Chatscreen = () => {
           </div>
         )
       )}
+      <form className="chatScreen__input">
+        <input
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          className="chatScreen__inputField"
+          placeholder="Type a message..."
+          type="text"
+        />
+        <button
+          onClick={handleSend}
+          type="submit"
+          className="chatScreen__inputButton"
+        >
+          SEND
+        </button>
+      </form>
     </div>
   );
 };
