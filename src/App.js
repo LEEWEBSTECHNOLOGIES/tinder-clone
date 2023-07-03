@@ -1,7 +1,6 @@
 import Header from "./components/header/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/layout/Layout";
-// import Home from "./components/home/Home";
 import TinderCards from "./components/tindercards/TinderCards";
 import SwipeButtons from "./components/swipebuttons/SwipeButtons";
 import Chats from "./components/chats/Chats";
